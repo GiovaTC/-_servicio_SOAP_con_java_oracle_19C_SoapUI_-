@@ -102,5 +102,26 @@ public class ProductoDAO {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public boolean eliminarProducto(int id) {
+        String sql =
+                "DELETE FROM productos WHERE id = ?";
+
+        try (
+                Connection connection =
+                        ConexionOracle.obtenerConexion();
+                PreparedStatement statement =
+                        connection.prepareStatement(sql)
+        ) {
+
+            statement.setInt(1, id);
+
+            return statement.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }   
 }
