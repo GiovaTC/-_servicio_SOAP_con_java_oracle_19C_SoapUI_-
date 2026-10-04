@@ -13,7 +13,7 @@ public class ConexionOracle {
 
     private static final String PASSWORD = "Tapiero123";
 
-    // VACIO.   
+    // VACIO.
     private ConexionOracle() {
 
     }
