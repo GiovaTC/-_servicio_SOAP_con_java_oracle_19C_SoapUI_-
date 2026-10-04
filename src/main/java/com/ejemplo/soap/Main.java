@@ -42,5 +42,5 @@ public class Main {
         System.out.println(
                 "Presione Ctrl + C para detener el servicio."
         );
-    }   
+    }
 }
