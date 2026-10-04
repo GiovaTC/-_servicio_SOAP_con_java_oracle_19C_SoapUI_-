@@ -11,6 +11,8 @@
 
 <img width="2550" height="1079" alt="image" src="https://github.com/user-attachments/assets/0921f0f8-144d-4b37-a278-285dfe221eae" />  
 
+<img width="2553" height="1079" alt="image" src="https://github.com/user-attachments/assets/0afb5560-6936-49ec-b7fd-e6e98bf1d681" />  
+
 ```
 
 ## 📌 Descripción
