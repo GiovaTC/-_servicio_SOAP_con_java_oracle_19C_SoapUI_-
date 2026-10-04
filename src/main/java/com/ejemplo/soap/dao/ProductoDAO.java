@@ -123,5 +123,35 @@ public class ProductoDAO {
             e.printStackTrace();
             return false;
         }
-    }   
+    }
+
+    public boolean actualizarProducto(
+            int id,
+            String nombre,
+            double precio,
+            int stock) {
+
+        String sql =
+                "UPDATE productos " +
+                        "SET nombre = ?, precio = ?, stock = ? " +
+                        "WHERE id = ?";
+
+        try (Connection connection =
+                     ConexionOracle.obtenerConexion();
+             PreparedStatement statement =
+                     connection.prepareStatement(sql)
+        ) {
+            statement.setString(1, nombre);
+            statement.setDouble(2, precio);
+            statement.setInt(3, stock);
+            statement.setInt(4, id);
+
+            return statement.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+            return false;
+        }
+    }
 }
